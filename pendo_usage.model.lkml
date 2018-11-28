@@ -10,11 +10,15 @@ datagroup: pendo_usage_default_datagroup {
 
 persist_with: pendo_usage_default_datagroup
 
-explore: accounts {}
-label: "Accounts"
+explore: accounts {
+  label: "Accounts"
+}
 
-explore: allfeatures {}
-label: "All Features"
+
+explore: allfeatures {
+  label: "All Features"
+}
+
 
 explore: allpages {}
 
