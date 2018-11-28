@@ -17,8 +17,17 @@ view: accounts {
     sql: ${TABLE}."customersuccessmanager" ;;
   }
 
-  dimension: firstvisit {
-    type: string
+  dimension_group: firstvisit {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
     sql: ${TABLE}."firstvisit" ;;
   }
 
