@@ -20,9 +20,12 @@ explore: allfeatures {
 }
 
 
-explore: allpages {}
+explore: allpages {
+  label: "All Pages"
+}
 
 explore: featureevents {
+  label: "Feature Events"
   join: accounts {
     type: left_outer
     sql_on: ${featureevents.account_id} = ${accounts.account_id} ;;
@@ -36,11 +39,16 @@ explore: featureevents {
   }
 }
 
-explore: monthlyactiveaccountcount {}
+explore: monthlyactiveaccountcount {
+  label: "Monthly Active Account Count"
+}
 
-explore: monthlyactiveusercount {}
+explore: monthlyactiveusercount {
+  label: "Monthly Active Visitor Count"
+}
 
 explore: pageevents {
+  label: "Page Events"
   join: accounts {
     type: left_outer
     sql_on: ${pageevents.account_id} = ${accounts.account_id} ;;
@@ -55,6 +63,7 @@ explore: pageevents {
 }
 
 explore: visitors {
+  label: "Visitors"
   join: accounts {
     type: left_outer
     sql_on: ${visitors.accountid} = ${accounts.account_id} ;;
