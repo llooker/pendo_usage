@@ -4,57 +4,57 @@ view: accounts {
   dimension: account_id {
     primary_key: yes
     type: string
-    sql: ${TABLE}."accountId" ;;
+    sql: ${TABLE}."ACCOUNTID" ;;
   }
 
   dimension: arrannuallyrecurringrevenue {
     type: string
-    sql: ${TABLE}."arrannuallyrecurringrevenue" ;;
+    sql: ${TABLE}."ARRANNUALLYRECURRINGREVENUE" ;;
   }
 
   dimension: customersuccessmanager {
     type: string
-    sql: ${TABLE}."customersuccessmanager" ;;
+    sql: ${TABLE}."CUSTOMERSUCCESSMANAGER" ;;
   }
 
   dimension: firstvisit {
     type: string
-    sql: ${TABLE}."firstvisit" ;;
+    sql: ${TABLE}."FIRSTVISIT" ;;
   }
 
   dimension: industry {
     type: string
-    sql: ${TABLE}."industry" ;;
+    sql: ${TABLE}."INDUSTRY" ;;
   }
 
   dimension: lastupdated {
     type: string
-    sql: ${TABLE}."lastupdated" ;;
+    sql: ${TABLE}."LASTUPDATED" ;;
   }
 
   dimension: lastvisit {
     type: string
-    sql: ${TABLE}."lastvisit" ;;
+    sql: ${TABLE}."LASTVISIT" ;;
   }
 
   dimension: name {
     type: string
-    sql: ${TABLE}."name" ;;
+    sql: ${TABLE}."NAME" ;;
   }
 
   dimension: planlevel {
     type: string
-    sql: ${TABLE}."planlevel" ;;
+    sql: ${TABLE}."PLANLEVEL" ;;
   }
 
   dimension: renewaldate {
     type: string
-    sql: ${TABLE}."renewaldate" ;;
+    sql: ${TABLE}."RENEWALDATE" ;;
   }
 
   dimension: totallicenses {
     type: string
-    sql: ${TABLE}."totallicenses" ;;
+    sql: ${TABLE}."TOTALLICENSES" ;;
   }
 
   measure: count {
