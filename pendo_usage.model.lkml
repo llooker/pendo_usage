@@ -39,6 +39,12 @@ explore: featureevents {
     sql_on: ${featureevents.visitor_id} = ${visitors.visitor_id} ;;
     relationship: many_to_one
   }
+
+  join: allfeatures {
+    type: left_outer
+    sql_on: ${featureevents.feature_id} = ${allfeatures.id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: monthlyactiveaccountcount {
@@ -75,6 +81,6 @@ explore: visitors {
   join: accounts {
     type: left_outer
     sql_on: ${visitors.accountid} = ${accounts.account_id} ;;
-    relationship: many_to_one
+    relationship: one_to_many
   }
 }
