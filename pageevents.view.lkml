@@ -12,8 +12,19 @@ view: pageevents {
     sql: ${TABLE}."APPID" ;;
   }
 
-  dimension: day {
-    type: string
+  dimension_group: day {
+    label: "Page Visit Date"
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      fiscal_quarter,
+      fiscal_year,
+      day_of_week
+    ]
     sql: ${TABLE}."DAY" ;;
   }
 
