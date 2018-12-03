@@ -3,12 +3,12 @@ view: monthlyactiveusercount {
 
   dimension: date {
     type: string
-    sql: ${TABLE}."date" ;;
+    sql: ${TABLE}."DATE" ;;
   }
 
   dimension: unique_visitors {
     type: string
-    sql: ${TABLE}."uniqueVisitors" ;;
+    sql: ${TABLE}."UNIQUEVISITORS" ;;
   }
 
   measure: count {

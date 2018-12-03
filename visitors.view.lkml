@@ -4,53 +4,53 @@ view: visitors {
   dimension: visitor_id {
     primary_key: yes
     type: string
-    sql: ${TABLE}."visitorId" ;;
+    sql: ${TABLE}."VISITORID" ;;
   }
 
   dimension: accountid {
     type: string
     # hidden: yes
-    sql: ${TABLE}."accountid" ;;
+    sql: ${TABLE}."ACCOUNTID" ;;
   }
 
   dimension: firstvisit {
     type: string
-    sql: ${TABLE}."firstvisit" ;;
+    sql: ${TABLE}."FIRSTVISIT" ;;
   }
 
   dimension: lastbrowsername {
     type: string
-    sql: ${TABLE}."lastbrowsername" ;;
+    sql: ${TABLE}."LASTBROWSERNAME" ;;
   }
 
   dimension: lastbrowserversion {
     type: string
-    sql: ${TABLE}."lastbrowserversion" ;;
+    sql: ${TABLE}."LASTBROWSERVERSION" ;;
   }
 
   dimension: lastoperatingsystem {
     type: string
-    sql: ${TABLE}."lastoperatingsystem" ;;
+    sql: ${TABLE}."LASTOPERATINGSYSTEM" ;;
   }
 
   dimension: lastservername {
     type: string
-    sql: ${TABLE}."lastservername" ;;
+    sql: ${TABLE}."LASTSERVERNAME" ;;
   }
 
   dimension: lastupdated {
     type: string
-    sql: ${TABLE}."lastupdated" ;;
+    sql: ${TABLE}."LASTUPDATED" ;;
   }
 
   dimension: lastuseragent {
     type: string
-    sql: ${TABLE}."lastuseragent" ;;
+    sql: ${TABLE}."LASTUSERAGENT" ;;
   }
 
   dimension: lastvisit {
     type: string
-    sql: ${TABLE}."lastvisit" ;;
+    sql: ${TABLE}."LASTVISIT" ;;
   }
 
   measure: count {

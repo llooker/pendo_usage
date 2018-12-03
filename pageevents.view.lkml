@@ -4,53 +4,53 @@ view: pageevents {
   dimension: account_id {
     type: string
     # hidden: yes
-    sql: ${TABLE}."accountId" ;;
+    sql: ${TABLE}."ACCOUNTID" ;;
   }
 
   dimension: app_id {
     type: string
-    sql: ${TABLE}."appId" ;;
+    sql: ${TABLE}."APPID" ;;
   }
 
   dimension: day {
     type: string
-    sql: ${TABLE}."day" ;;
+    sql: ${TABLE}."DAY" ;;
   }
 
   dimension: num_events {
     type: string
-    sql: ${TABLE}."numEvents" ;;
+    sql: ${TABLE}."NUMEVENTS" ;;
   }
 
   dimension: num_minutes {
     type: string
-    sql: ${TABLE}."numMinutes" ;;
+    sql: ${TABLE}."NUMMINUTES" ;;
   }
 
   dimension: page_id {
     type: string
-    sql: ${TABLE}."pageId" ;;
+    sql: ${TABLE}."PAGEID" ;;
   }
 
   dimension: remote_ip {
     type: string
-    sql: ${TABLE}."remoteIp" ;;
+    sql: ${TABLE}."REMOTEIP" ;;
   }
 
   dimension: server {
     type: string
-    sql: ${TABLE}."server" ;;
+    sql: ${TABLE}."SERVER" ;;
   }
 
   dimension: user_agent {
     type: string
-    sql: ${TABLE}."userAgent" ;;
+    sql: ${TABLE}."USERAGENT" ;;
   }
 
   dimension: visitor_id {
     type: string
     # hidden: yes
-    sql: ${TABLE}."visitorId" ;;
+    sql: ${TABLE}."VISITORID" ;;
   }
 
   measure: count {

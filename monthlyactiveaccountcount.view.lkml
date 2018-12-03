@@ -3,12 +3,12 @@ view: monthlyactiveaccountcount {
 
   dimension: date {
     type: string
-    sql: ${TABLE}."date" ;;
+    sql: ${TABLE}."DATE" ;;
   }
 
   dimension: unique_accounts {
     type: string
-    sql: ${TABLE}."uniqueAccounts" ;;
+    sql: ${TABLE}."UNIQUEACCOUNTS" ;;
   }
 
   measure: count {

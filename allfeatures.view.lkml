@@ -4,12 +4,12 @@ view: allfeatures {
   dimension: id {
     primary_key: yes
     type: string
-    sql: ${TABLE}."id" ;;
+    sql: ${TABLE}."ID" ;;
   }
 
   dimension: name {
     type: string
-    sql: ${TABLE}."name" ;;
+    sql: ${TABLE}."NAME" ;;
   }
 
   measure: count {
