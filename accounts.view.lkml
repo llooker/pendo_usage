@@ -17,9 +17,20 @@ view: accounts {
     sql: ${TABLE}."CUSTOMERSUCCESSMANAGER" ;;
   }
 
-  dimension: firstvisit {
-    type: string
-    sql: ${TABLE}."FIRSTVISIT" ;;
+  dimension_group: firstvisit {
+    label: "First Visit"
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      fiscal_quarter,
+      fiscal_year,
+      day_of_week
+    ]
+      sql: ${TABLE}."FIRSTVISIT" ;;
   }
 
   dimension: industry {
