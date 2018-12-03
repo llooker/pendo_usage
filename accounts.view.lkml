@@ -1,4 +1,5 @@
 view: accounts {
+  label: "Accounts"
   sql_table_name: PENDO.ACCOUNTS ;;
 
   dimension: account_id {

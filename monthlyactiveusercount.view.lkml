@@ -1,4 +1,5 @@
 view: monthlyactiveusercount {
+  label: "Monthly Active User Count"
   sql_table_name: PENDO.MONTHLYACTIVEUSERCOUNT ;;
 
   dimension_group: date {
@@ -18,6 +19,7 @@ view: monthlyactiveusercount {
   }
 
   dimension: unique_visitors {
+    label: "Unique Visitors"
     type: string
     sql: ${TABLE}."UNIQUEVISITORS" ;;
   }
