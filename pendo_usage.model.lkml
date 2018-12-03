@@ -3,7 +3,7 @@ connection: "pendosnowflake"
 # include all the views
 include: "*.view"
 
-# include: "*.dashboard.lookml"
+include: "*.dashboard.lookml"
 
 datagroup: pendo_usage_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
