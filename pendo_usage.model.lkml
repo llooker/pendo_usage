@@ -62,6 +62,12 @@ explore: pageevents {
     sql_on: ${pageevents.visitor_id} = ${visitors.visitor_id} ;;
     relationship: many_to_one
   }
+
+  join: allpages {
+    type: left_outer
+    sql_on: ${pageevents.page_id} = ${allpages.id} ;;
+    relationship: many_to_one
+  }
 }
 
 explore: visitors {
