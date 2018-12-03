@@ -12,8 +12,4 @@ view: allfeatures {
     sql: ${TABLE}."NAME" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [id, name]
-  }
 }
