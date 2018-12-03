@@ -54,6 +54,7 @@ view: featureevents {
   }
 
   measure: count {
+    label: "Feature Event Count"
     type: count
     drill_fields: [accounts.account_id, accounts.name, visitors.lastbrowsername, visitors.lastservername, visitors.visitor_id]
   }

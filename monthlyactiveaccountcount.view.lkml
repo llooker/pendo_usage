@@ -11,8 +11,4 @@ view: monthlyactiveaccountcount {
     sql: ${TABLE}."UNIQUEACCOUNTS" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
 }

@@ -54,6 +54,7 @@ view: pageevents {
   }
 
   measure: count {
+    label: "Page Event Count"
     type: count
     drill_fields: [accounts.account_id, accounts.name, visitors.lastbrowsername, visitors.lastservername, visitors.visitor_id]
   }

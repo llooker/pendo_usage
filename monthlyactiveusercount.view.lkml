@@ -11,8 +11,4 @@ view: monthlyactiveusercount {
     sql: ${TABLE}."UNIQUEVISITORS" ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
 }
