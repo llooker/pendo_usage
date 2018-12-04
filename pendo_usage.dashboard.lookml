@@ -130,7 +130,7 @@
     show_silhouette: false
     totals_color: "#808080"
     listen: {}
-    row: 4
+    row: 12
     col: 0
     width: 12
     height: 7
@@ -180,56 +180,10 @@
     show_silhouette: false
     totals_color: "#808080"
     listen: {}
-    row: 11
+    row: 4
     col: 0
     width: 24
     height: 8
-  - title: New TileMost Active Account by Page Visits
-    name: New TileMost Active Account by Page Visits
-    model: pendo_usage
-    explore: pageevents
-    type: looker_bar
-    fields:
-    - pageevents.account_id
-    - pageevents.count
-    sorts:
-    - pageevents.count desc
-    limit: 10
-    query_timezone: America/Los_Angeles
-    stacking: ''
-    show_value_labels: false
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    point_style: none
-    series_colors:
-      pageevents.count: "#ed6168"
-    series_types: {}
-    limit_displayed_rows: false
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    listen: {}
-    row: 4
-    col: 13
-    width: 11
-    height: 7
   - title: Most Active Visitors by Feature Visits
     name: Most Active Visitors by Feature Visits
     model: pendo_usage
@@ -272,7 +226,7 @@
     show_silhouette: false
     totals_color: "#808080"
     listen: {}
-    row: 19
+    row: 27
     col: 0
     width: 12
     height: 7
@@ -318,7 +272,7 @@
     show_silhouette: false
     totals_color: "#808080"
     listen: {}
-    row: 19
+    row: 27
     col: 13
     width: 11
     height: 7
@@ -364,7 +318,7 @@
     show_silhouette: false
     totals_color: "#808080"
     listen: {}
-    row: 26
+    row: 19
     col: 0
     width: 24
     height: 8
@@ -519,3 +473,49 @@
     col: 8
     width: 8
     height: 6
+  - title: Most Active Account by Page Visits
+    name: Most Active Account by Page Visits
+    model: pendo_usage
+    explore: pageevents
+    type: looker_bar
+    fields:
+    - pageevents.account_id
+    - pageevents.count
+    sorts:
+    - pageevents.count desc
+    limit: 10
+    query_timezone: America/Los_Angeles
+    stacking: ''
+    show_value_labels: false
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    point_style: none
+    series_colors:
+      pageevents.count: "#ed6168"
+    series_types: {}
+    limit_displayed_rows: false
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    listen: {}
+    row: 12
+    col: 13
+    width: 11
+    height: 7
