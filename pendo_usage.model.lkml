@@ -12,6 +12,10 @@ datagroup: pendo_usage_default_datagroup {
 
 persist_with: pendo_usage_default_datagroup
 
+explore: events {
+  label: "Events"
+}
+
 explore: accounts {
   label: "Accounts"
 }
