@@ -4,8 +4,7 @@ view: events {
                   min(day) over (partition by VISITORID, ACCOUNTID) as firstvisit_user,
                   max(day) over (partition by VISITORID, ACCOUNTID) as lastvisit_user,
                   min(day) over (partition by ACCOUNTID) as firstvisit_account,
-                  max(day) over (partition by ACCOUNTID) as lastvisit_account,
-                  sum(case when DATE(day) >= DATE_SUB(CURRENT_DATE(), INTERVAL 60 DAY) then 1) else 0 end over (partition by VISITORID, ACCOUNTID) as days_active_last60
+                  max(day) over (partition by ACCOUNTID) as lastvisit_account
           from    PENDO.VISITORS a ;;
   }
 
