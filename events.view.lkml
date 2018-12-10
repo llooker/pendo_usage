@@ -1,13 +1,13 @@
 view: events {
   derived_table: {
     sql:  select  a.*,
-                  min(day) over (partition by visitorid, accountid) as firstvisit_user,
-                  max(day) over (partition by visitorid, accountid) as lastvisit_user,
-                  min(day) over (partition by accountid) as firstvisit_account,
-                  max(day) over (partition by accountid) as lastvisit_account,
-                  sum(case when DATE(day) >= DATE_SUB(CURRENT_DATE(), INTERVAL 60 DAY) then 1 else 0 end) over (partition by visitorid, accountid) as days_active_last60,
+                  min(day) over (partition by VISITORID, ACCOUNTID) as firstvisit_user,
+                  max(day) over (partition by VISITORID, ACCOUNTID) as lastvisit_user,
+                  min(day) over (partition by ACCOUNTID) as firstvisit_account,
+                  max(day) over (partition by ACCOUNTID) as lastvisit_account,
+                  sum(case when DATE(day) >= DATE_SUB(CURRENT_DATE(), INTERVAL 60 DAY) then 1 else 0 end) over (partition by VISITORID, ACCOUNTID) as days_active_last60,
                   rand() as pk
-          from    PENDO.PAGEEVENTS a ;;
+          from    PENDO.VISITORS a ;;
   }
 
   dimension: pk {
@@ -20,7 +20,7 @@ view: events {
   dimension: accountid {
     label: "Subscription Name"
     type: string
-    sql: ${TABLE}.accountid ;;
+    sql: ${TABLE}.ACCOUNTID ;;
   }
 
   dimension_group: day {
@@ -36,20 +36,20 @@ view: events {
       fiscal_year,
       day_of_week
     ]
-    sql: ${TABLE}.day ;;
+    sql: ${TABLE}.DAY ;;
   }
 
   measure: numevents {
     label: "Number of Events"
     type: sum
-    sql: ${TABLE}.numevents ;;
+    sql: ${TABLE}.NUMEVENTS ;;
     value_format_name: decimal_0
   }
 
   dimension: numminutes {
     hidden: yes
     type: number
-    sql: ${TABLE}.numminutes ;;
+    sql: ${TABLE}.NUMMINUTES ;;
   }
 
   measure: number_of_minutes {
@@ -62,19 +62,19 @@ view: events {
   dimension: type {
     hidden: yes
     type: string
-    sql: ${TABLE}.type ;;
+    sql: ${TABLE}.TYPE ;;
   }
 
   dimension: visitorid {
     label: "Visitor ID"
     type: string
-    sql: ${TABLE}.visitorid ;;
+    sql: ${TABLE}.VISITORID ;;
   }
 
   dimension: days_active_last60 {
     label: "Days Active Out of Last 60 Days"
     type: number
-    sql: ${TABLE}.days_active_last60 ;;
+    sql: ${TABLE}.DAYS_ACTIVE_LAST60 ;;
   }
 
   dimension_group: firstvisit_user {
@@ -89,7 +89,7 @@ view: events {
       fiscal_quarter,
       fiscal_year
     ]
-    sql: ${TABLE}.firstvisit_user ;;
+    sql: ${TABLE}.FIRSTVISIT_USER ;;
   }
 
   dimension_group: lastvisit_user {
@@ -104,7 +104,7 @@ view: events {
       fiscal_quarter,
       fiscal_year
     ]
-    sql: ${TABLE}.lastvisit_user ;;
+    sql: ${TABLE}.LASTVISIT_USER ;;
   }
 
   dimension_group: firstvisit_account {
@@ -119,7 +119,7 @@ view: events {
       fiscal_quarter,
       fiscal_year
     ]
-    sql: ${TABLE}.firstvisit_account ;;
+    sql: ${TABLE}.FIRSTVISIT_ACCOUNT ;;
   }
 
   dimension_group: lastvisit_account {
@@ -134,7 +134,7 @@ view: events {
       fiscal_quarter,
       fiscal_year
     ]
-    sql: ${TABLE}.lastvisit_account ;;
+    sql: ${TABLE}.LASTVISIT_ACCOUNT ;;
   }
 
   measure: active_user {
