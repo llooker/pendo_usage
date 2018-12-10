@@ -2,7 +2,7 @@
 
 This Pendo Usage Block allows you to go even deeper into your Pendo Usage data to explore things such as Monthly Active Users and Monthly Active Accounts, Top 10 Pages and Features by Visitor and Account, and supporting data such as Account Industry, User OS, Browser, and Browser version counts.  Using this information, you can gain insights into how your application is being used to help inform product direction.  You can also use this data to leverage another key feature within Pendo - using Guides to drive behavior of users of your application.
 
-# Pendo NPS - Visualized with Looker
+# Pendo Usage - Visualized with Looker
 
 The Block was built using representative components to pull data from Pendo (Xplenty and the Pendo public API), transform it as necessary (ex. convert dates from epoch to human-readable, apply a hash to PII data like visitorId), load it into a data warehouse / repository (in this case, Snowflake), and visualize it via Looker.
 
