@@ -5,7 +5,7 @@ view: events {
                   max(day) over (partition by VISITORID, ACCOUNTID) as lastvisit_user,
                   min(day) over (partition by ACCOUNTID) as firstvisit_account,
                   max(day) over (partition by ACCOUNTID) as lastvisit_account
-          from    PENDO.VISITORS a ;;
+          from    PENDO.EVENTS a ;;
   }
 
   dimension: pk {
