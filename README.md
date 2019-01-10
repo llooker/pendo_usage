@@ -1,6 +1,6 @@
 # Description
 
-This Pendo Usage Block allows you to go even deeper into your Pendo Usage data to explore things such as Monthly Active Users and Monthly Active Accounts, Top 10 Pages and Features by Visitor and Account, and supporting data such as Account Industry, User OS, Browser, and Browser version counts.  Using this information, you can gain insights into how your application is being used to help inform product direction.  You can also use this data to leverage another key feature within Pendo - using Guides to drive behavior of users of your application.
+This Looker Model focuses on Pendo usage data.  There are two dashboards included in this model - Pendo Account and Visitor Usage and Pendo Application Usage.  This Pendo Block allows you to go even deeper into your Pendo Usage data to explore things such as Monthly Active Users and Monthly Active Accounts, Top 10 Pages and Features by Visitor and Account, and supporting data such as Account Industry, User OS, Browser, and Browser version counts.  Using this information, you can gain insights into how "sticky" your application is and how your application is being used to help inform product direction.  You can also use this data to leverage another key feature within Pendo - using Guides to drive behavior of users of your application.
 
 # Pendo Usage - Visualized with Looker
 
@@ -37,9 +37,9 @@ Xplenty is a leading Extract, Transform and Load (ETL) tool to help you easily m
 
 Why did we used Xplenty for this example?
 
-Xplenty is the tool Pendo uses internally to move data from a variety of sources (Pendo, Marketo, Salesforce, etc.) into a reporting data warehouse for BI purposes.  It was handy and is super simple to us.
+Xplenty is the tool Pendo uses internally to move data from a variety of sources (Pendo, Marketo, Salesforce, etc.) into a reporting data warehouse for BI purposes.  It was handy and is super simple to use.
 
-You could use whatever ETL tool, scripts, etc. you're comfortable with.  The following instructions should be useful in a general sense if you elect to use an alternative to Xplenty.
+You can use whatever ETL tool, scripts, etc. you're comfortable with.  The following instructions should be useful in a general sense if you elect to use an alternative to Xplenty.
 
 Repeat the below process for each of the API calls you downloaded.
 
@@ -67,7 +67,8 @@ For this Block, we created the following in Snowflake:
 - Warehouse = `COMPUTE_WH`
 - Schema = `PENDO`
 - Database = `PENDO`
-- Tables = `VISITORS` `ACCOUNTS` `ALLFEATURES` `ALLPAGES` `FEATUREEVENTS` `PAGEEVENTS` `MONTHLYACTIVEUSERCOUNT` `MONTHLYACTIVEACCOUNTCOUNT`
+- Table required for the Account and Visitor Usage Dashboard = `EVENTS`
+- Tables required for the Application Usage Dashboard = `VISITORS` `ACCOUNTS` `ALLFEATURES` `ALLPAGES` `FEATUREEVENTS` `PAGEEVENTS`
 
 The table column names are defined by the field names included in the `select` statement in the pre-defined API calls.  Please leave them as they are to ensure success with this Block.
 
