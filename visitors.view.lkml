@@ -18,7 +18,7 @@ view: visitors {
 
   dimension_group: firstvisit {
     label: "First Visit"
-     type: time
+    type: time
     timeframes: [
       raw,
       time,
@@ -58,7 +58,7 @@ view: visitors {
 
   dimension_group: lastupdated {
     label: "Last Updated"
-     type: time
+    type: time
     timeframes: [
       raw,
       time,
@@ -80,7 +80,7 @@ view: visitors {
 
   dimension_group: lastvisit {
     label: "Last Visit"
-     type: time
+    type: time
     timeframes: [
       raw,
       time,

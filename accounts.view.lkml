@@ -34,7 +34,7 @@ view: accounts {
       fiscal_year,
       day_of_week
     ]
-      sql: ${TABLE}."FIRSTVISIT" ;;
+    sql: ${TABLE}."FIRSTVISIT" ;;
   }
 
   dimension: industry {
@@ -44,7 +44,7 @@ view: accounts {
   }
 
   dimension_group: lastupdated {
-     label: "Last Updated"
+    label: "Last Updated"
     type: time
     timeframes: [
       raw,
@@ -60,7 +60,7 @@ view: accounts {
   }
 
   dimension_group: lastvisit {
-     label: "Last Visit"
+    label: "Last Visit"
     type: time
     timeframes: [
       raw,

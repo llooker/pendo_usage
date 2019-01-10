@@ -14,6 +14,19 @@ persist_with: pendo_usage_default_datagroup
 
 explore: events {
   label: "Events"
+
+  join: pendo_activeuser_view {
+    view_label: "Pendo Active User View"
+    relationship: many_to_one
+    sql_on: ${events.accountid}=${pendo_activeuser_view.accountid} and ${events.visitorid}=${pendo_activeuser_view.visitorid}  ;;
+  }
+
+  join: pendo_activeaccount_view {
+    view_label: "Pendo Active Account View"
+    relationship: many_to_one
+    sql_on: ${events.accountid}=${pendo_activeaccount_view.accountid} ;;
+  }
+
 }
 
 explore: accounts {
@@ -49,14 +62,6 @@ explore: featureevents {
     sql_on: ${featureevents.feature_id} = ${allfeatures.id} ;;
     relationship: many_to_one
   }
-}
-
-explore: monthlyactiveaccountcount {
-  label: "Monthly Active Account Count"
-}
-
-explore: monthlyactiveusercount {
-  label: "Monthly Active Visitor Count"
 }
 
 explore: pageevents {
